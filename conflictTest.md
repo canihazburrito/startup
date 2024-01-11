@@ -1,3 +1,3 @@
 This file is to test resolving conflicts with GitHub.
 
-Okay now I have resolved the merge and this is what I actually want
+This is what I want this line to say for real
