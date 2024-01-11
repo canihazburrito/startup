@@ -1,3 +1,3 @@
 This file is to test resolving conflicts with GitHub.
 
-I changed this line in VSCode without pulling first
+Okay now I have resolved the merge and this is what I actually want
