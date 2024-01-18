@@ -5,7 +5,7 @@ This is my startup application for BYU CS 260.
 
 ## Notes
 
-These are my [notes](notes.md) for what I have learned during this course.
+These are my [notes](Notes/notes.md) for what I have learned during this course.
 
 ## Specification Deliverable
 
