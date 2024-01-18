@@ -34,5 +34,18 @@ The lobby displays the lobby code and topic at the top, as well as the options, 
 - Ability to join an active lobby or create a new one
 - Customizable topic for each lobby
 - Custom options that can be submitted by users
-- Ability to select an option as a vote
+- Ability to select an option as a vote anonymously
 - Options and votes are updated in realtime
+
+### Technologies:
+
+- **HTML** - Application uses HTML structure with three HTML pages.
+- **CSS** - Allows application to adjust to different screen sizes and uses a color palette that isn't repulsive and is colorblind friendly.
+- **JavaScript** - Application has buttons to login, join or create lobbies, enter text for topics and options, cast and display votes.
+- **Service** - Backend service with endpoints for:
+  - login
+  - creation of lobbies
+  - submitting votes
+  - retriving vote status
+- **DB/Login** - Users can't join or create a lobby unless they are auithenticated. Users, topics, options, and votes are stored in database.
+- **Websocket** - The topic of the lobby as well as options and votes are broadcast to other users in the lobby.
