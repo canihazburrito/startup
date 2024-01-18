@@ -8,7 +8,7 @@ Don't forget to add:
 - tie breaker feature?
 
 ### First assignment
-[Setting up GitHub](Notes/GitHub.md)
+[Setting up GitHub](GitHub.md)
 
 ### Startup Specification
-[Startup Specification Notes](Notes/StartupSpec.md)
+[Startup Specification Notes](StartupSpec.md)
