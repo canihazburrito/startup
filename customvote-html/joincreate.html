@@ -25,7 +25,20 @@
         </header>
 
         <main>
-            <!---->
+            <div class="player">
+                Welcome: <span class="player-name">User</span>
+            </div>
+
+            <p>Join or Create a Lobby</p>
+            <form action="lobby.html" method="get">
+                <label for="code">Code: </label>
+                <input type="text" id="code" placeholder="Enter lobby code" />
+                <button type="submit">Join!</button>
+            </form>
+            <p>or</p>
+            <form action="lobby.html" method="get">
+                <button type="button">Create Lobby</button>
+            </form>
         </main>
 
         <footer>
