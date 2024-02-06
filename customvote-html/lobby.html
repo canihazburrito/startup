@@ -26,6 +26,11 @@
         </header>
 
         <main>
+            <!-- Display the user's username -->
+            <div class="player">
+                Welcome: <span class="player-name">User</span>
+            </div>
+            
             <!-- Display of lobby code, which will come from a 3rd part service -->
             <div class="lobbycode">
                 Lobby code: 
@@ -34,12 +39,15 @@
             <br/>
 
             <div>
+                <!-- Title of the topic of the lobby, this is editable by users in the lobby and is updated in realtime -->
                 <strong>
                     <label for="topic">Topic: </label>
                     <span id="topic" style="font-size:200%" contenteditable="true">You can edit this topic</span>
                 </strong>
                 <i class='far fa-edit'></i>
             </div>
+
+
             
         </main>
 
