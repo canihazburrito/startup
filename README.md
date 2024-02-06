@@ -17,15 +17,15 @@ Often times it can be difficult to reach a decision when you are working with a 
 
 The inital screen for the user.
 
-![login page](index.png)
+![login page](Media/index.png)
 
 Once logged in, the user can either join or create a private lobby.
 
-![join/create screen](joincreate.png)
+![join/create screen](Media/joincreate.png)
 
 The lobby displays the lobby code and topic at the top, as well as the options, how many votes they have, and the ability to cast a vote. The user can also submit new options or exit the lobby.
 
-![lobby](lobby.png)
+![lobby](Media/lobby.png)
 
 ### Key Features:
 
