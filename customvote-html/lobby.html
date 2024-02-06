@@ -49,6 +49,67 @@
             </div>
             <br/>
             
+            <table class="voting-box">
+                <thead>
+                    <tr>
+                        <th>Options</th>
+                        <th>Votes</th>
+                    </tr>
+                </thead>
+
+                <!-- These options will be updated as users submit more options below -->
+                <tbody>
+                    <form>
+                        <tr>
+                            <td>
+                                <div class="radio">
+                                    <label for="option1">Option 1</label>
+                                    <input type="radio" id="option1" name="voteopt">
+                                </div>
+                            </td>
+                            <td>
+                                <!-- These votes will be updated in realtime with WebSocket -->
+                                <div class="votes">
+                                    0
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="radio">
+                                    <label for="option2">Option 2</label>
+                                    <input type="radio" id="option2" name="voteopt">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="votes">
+                                    5
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="radio">
+                                    <label for="option3">Option 3</label>
+                                    <input type="radio" id="option3" name="voteopt">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="votes">
+                                    1
+                                </div>
+                            </td>
+                        </tr>
+                    </form>
+                </tbody>
+            </table>
+            <br/>
+
+            <!-- Enter in a new option -->
+            <form>
+                <input type="text" id="newopt" placeholder="Enter a new option" />
+                <button onclick="document.getElementById('newopt').value=''">Submit</button>
+            </form>
         </main>
 
         <footer>
