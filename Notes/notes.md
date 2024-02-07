@@ -12,3 +12,6 @@ Don't forget to add:
 
 ### Startup Specification
 [Startup Specification Notes](StartupSpec.md)
+
+### HTML
+[Startup html notes](startupHTML.md)
