@@ -49,3 +49,15 @@ The lobby displays the lobby code and topic at the top, as well as the options, 
   - retriving vote status
 - **DB/Login** - Users can't join or create a lobby unless they are auithenticated. Users, topics, options, and votes are stored in database.
 - **Websocket** - The topic of the lobby as well as options and votes are broadcast to other users in the lobby.
+
+## HTML Deliverable
+
+- **HTML pages** - I included 4 html pages for logging in, joining a lobby, voting, and an about page
+- **HTML tags** - Each page has head, nav, body, header, main, and footer tags
+- **Links** - The login page links to the join/create page which links to the lobby page. Every page contains links in the navigation bar to the pther pages as well as the about page and in the footer of each page is a link to my GitHub respository
+- **Text** - Each page contains short instructions for the various features and buttons and the about page contains information about the site
+- **3rd Party Service** - The lobby code on the lobby screen will be attrivuted to a 3rd party service.
+- **Images** - The about page has a picture of me :/)
+- **Login** - The home page has a placeholder to log in
+- **Database** - The options on the lobby page will be stored in a database
+- **Websocket** - The lobby title as well as the options and the votes for each option will all be updated for the user in realtime
