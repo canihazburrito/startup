@@ -1,7 +1,6 @@
 body {
     display: flex;
     flex-direction: column;
-
 }
 
 header {
@@ -22,8 +21,21 @@ menu {
 
 a.navbar-brand {
     color: cornflowerblue;
+    font-size: xx-large;
 }
   
 menu .nav-item {
     padding: 0 0.5em;
 }
+
+main {
+    flex: 1 calc(100vh - 110px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  footer {
+    flex: 0 30px;
+  }
