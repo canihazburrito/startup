@@ -39,9 +39,9 @@
             </nav>
         </header>
 
-        <main class="container-fluid">
+        <main>
             <!-- Login interface on the home page -->
-            <div class="border border-2 text-center p-5">
+            <div class="container-sm border border-2 text-center p-5">
                 <h3>Log In or Sign Up</h3>
                 <form action="joincreate.html" method="get">
                     <div class="row mb-3">
@@ -51,24 +51,25 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="pwd" class="col-sm-2 col-form-label">Password: </label>
+                        <label for="pwd" class="col-sm-2 col-form-label min-width-100">Password: </label>
                         <div class="col-sm-10">
                             <input class="form-control" type="password" id="pwd" name="pwd"/>
                         </div>
                     </div>
-                    <br/>
-                    <button type="submit">Login</button>
-                    <p>or</p>
-                    <button type="submit">Sign Up</button>
+                    <div>
+                        <p>
+                            <button class="btn btn-primary" type="submit">Login</button>
+                            or
+                            <button class="btn btn-primary" type="submit">Sign Up</button>
+                        </p>
+                    </div>
                 </form>
-                <br/>
             </div>
             
         </main>
 
-        <footer>
-            <span class="text-reset">Carter Myers</span>
-            <br/>
+        <footer class="container-fluid justify-content-center">
+            <span class="text-reset p-3">Carter Myers</span>
             <a href="https://github.com/canihazburrito/startup.git">GitHub</a>
         </footer>
     </body>
