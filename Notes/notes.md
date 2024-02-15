@@ -15,3 +15,6 @@ Don't forget to add:
 
 ### HTML
 [Startup html notes](startupHTML.md)
+
+### Simon CSS
+I added a feature to the play buttons so that they would darken when hovered over. I did this by using the :hover selector.
