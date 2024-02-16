@@ -61,3 +61,12 @@ The lobby displays the lobby code and topic at the top, as well as the options, 
 - **Login** - The home page has a placeholder to log in
 - **Database** - The options on the lobby page will be stored in a database
 - **Websocket** - The lobby title as well as the options and the votes for each option will all be updated for the user in realtime
+
+## CSS Deliverable
+
+- **Header, footer, and main content body** - stylized and responsive to webpage size
+- **Navigation elements** - menu items are inline and responsive to webpage size
+- **Responsive to window resizing** - each page tested with window resizing and different device screens
+- **Application elements** - consistent theme throughout elements
+- **Application text content** - consistent font, as well as consistent sizing and color
+- **Application images** - image on about page is appropriately sized and responsive to webpage sizing
