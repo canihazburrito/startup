@@ -66,7 +66,7 @@
                 <thead>
                     <tr>
                         <th>Options</th>
-                        <th>Votes</th>
+                        <th id="vote-head">Votes</th>
                     </tr>
                 </thead>
 
@@ -120,15 +120,15 @@
 
             <!-- Enter in a new option, options stored in database -->
             <!-- Once third party services and Websocket is implimented, this button won't reset the title -->
-            <form>
-                <input type="text" id="newopt" placeholder="Enter a new option" />
-                <button onclick="document.getElementById('newopt').value=''">Submit</button>
+            <form class="input-group w-50">
+                <input class="form-control" type="text" id="newopt" placeholder="Enter a new option" />
+                <button class="btn btn-info" onclick="document.getElementById('newopt').value=''">Submit</button>
             </form>
             <br/>
 
             <!-- Button to exit lobby -->
             <form action="joincreate.html" method="get">
-                <button type="submit">Exit</button>
+                <button class="btn btn-danger" type="submit">Exit</button>
             </form>
             <br/>
 
