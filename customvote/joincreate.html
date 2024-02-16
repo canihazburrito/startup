@@ -39,23 +39,30 @@
             </nav>
         </header>
 
-        <main>
+        <main class="justify-content-center align-items-center">
             <!-- Display the user's username -->
             <div class="player">
                 Welcome: <span class="player-name">User</span>
             </div>
 
             <!-- Enter a lobby code or create a new lobby -->
-            <p>Join or Create a Lobby</p>
-            <form action="lobby.html" method="get">
-                <label for="code">Code: </label>
-                <input type="text" class="code" placeholder="Enter lobby code" />
-                <button type="submit">Join!</button>
-            </form>
-            <p>or</p>
-            <form action="lobby.html" method="get">
-                <button type="submit">Create Lobby</button>
-            </form>
+            <div class="border border-2 text-center p-5 w-75">
+                <h3>Join or Create a Lobby</h3>
+                <div class="row g-3 justify-content-center">
+                    <form action="lobby.html" method="get" class="col-auto">
+                        <label for="code" class="col-form-label">Code: </label>
+                        <div class="input-group col-auto">
+                            <input type="text" class="form-control" placeholder="Enter lobby code" />
+                            <button type="submit" class="btn btn-info">Join!</button>
+                        </div>
+                    </form>
+                </div>
+                <p>or</p>
+                <form action="lobby.html" method="get">
+                    <button type="submit" class="btn btn-info">Create Lobby</button>
+                </form>
+            </div>
+                
         </main>
 
         <footer class="container-fluid justify-content-center">
