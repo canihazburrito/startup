@@ -1,9 +1,16 @@
-function displayName() {
+function displayInfo() {
     if (localStorage.getItem("userName")) {
         let playerName = localStorage.getItem("userName");
         document.getElementById("player-name").textContent = playerName;
     } else {
         document.getElementById("player-name").textContent = "User";
+    }
+
+    if (localStorage.getItem("lobbyCode")) {
+        let lobbyCode = localStorage.getItem("lobbyCode");
+        document.getElementById("codeDisplay").textContent = lobbyCode;
+    } else {
+        document.getElementById("codeDisplay").textContent = "ERROR: INVALID CODE";
     }
 }
 

@@ -18,7 +18,7 @@
         <script src="https://kit.fontawesome.com/e0dcfe9aee.js" crossorigin="anonymous"></script>
         <title>Custom Vote</title>
     </head>
-    <body onload="displayName()">
+    <body onload="displayInfo()">
         <header class="container-fluid">
 
             <!-- Navigation menu -->
@@ -50,7 +50,7 @@
                 
                 <!-- Display of lobby code, which will come from a 3rd part service -->
                 <div class="col" id="lobbycode">
-                    Lobby code: <span class="code text-secondary border border-2">ABC123</span>
+                    Lobby code: <span class="text-secondary border border-2" id="codeDisplay"></span>
                 </div>
             </div>
 
