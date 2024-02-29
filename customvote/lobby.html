@@ -18,7 +18,7 @@
         <script src="https://kit.fontawesome.com/e0dcfe9aee.js" crossorigin="anonymous"></script>
         <title>Custom Vote</title>
     </head>
-    <body>
+    <body onload="displayName()">
         <header class="container-fluid">
 
             <!-- Navigation menu -->
@@ -44,8 +44,8 @@
         <main class="justify-content-start">
             <div class="row p-3">
                 <!-- Display the user's username -->
-                <div class="player col">
-                    Welcome: <span class="player-name text-secondary">User</span>
+                <div class="player p-3">
+                    Welcome: <span class="text-secondary" id="player-name"></span>
                 </div>
                 
                 <!-- Display of lobby code, which will come from a 3rd part service -->
