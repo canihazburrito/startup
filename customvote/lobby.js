@@ -29,7 +29,7 @@ function createCode() {
         code[i] = char[randomIndex];
     }
 
-    localStorage.removeItem("title");
+    clearInfo();
     localStorage.setItem("lobbyCode", code.join(""));
     window.location.href = "lobby.html";
 }
@@ -44,4 +44,8 @@ function saveTitle() {
     let titleEl = document.getElementById("title").value;
     localStorage.setItem("title", titleEl);
     location.reload();
+}
+
+function clearInfo() {
+    localStorage.removeItem("title");
 }

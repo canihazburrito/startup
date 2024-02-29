@@ -57,7 +57,7 @@
             <!-- Title of the topic of the lobby, this is editable by users in the lobby and is updated in realtime -->
             <label for="title">Topic: </label>
             <form class="input-group w-50">
-                <input class="form-control" type="text" id="title" placeholder="Enter a new title" />
+                <textarea class="form-control" rows="1" id="title" placeholder="Enter a new title"></textarea>
                 <button class="btn btn-info" onclick="saveTitle()">Save</button>
             </form>
             <br/>
@@ -128,7 +128,7 @@
 
             <!-- Button to exit lobby -->
             <form action="joincreate.html" method="get">
-                <button class="btn btn-danger" type="submit">Exit</button>
+                <button class="btn btn-danger" type="submit" onclick="clearInfo()">Exit</button>
             </form>
             <br/>
 
