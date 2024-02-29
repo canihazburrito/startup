@@ -16,6 +16,13 @@ function createCode() {
         randomIndex = Math.floor(Math.random() * 36);
         code[i] = char[randomIndex];
     }
-    
+
     localStorage.setItem("lobbyCode", code.join(""));
+    window.location.href = "lobby.html";
+}
+
+function joinCode() {
+    const codeEl = document.querySelector("#joincode");
+    localStorage.setItem("lobbyCode", codeEl.value);
+    window.location.href = "lobby.html";
 }
