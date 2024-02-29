@@ -54,14 +54,13 @@
                 </div>
             </div>
 
-            <div>
-                <!-- Title of the topic of the lobby, this is editable by users in the lobby and is updated in realtime -->
-                <strong>
-                    <label for="topic">Topic: </label>
-                    <span id="topic" style="font-size:200%" contenteditable="true">You can edit this topic</span>
-                </strong>
-                <i class='far fa-edit'></i>
-            </div>
+            <!-- Title of the topic of the lobby, this is editable by users in the lobby and is updated in realtime -->
+            <label for="title">Topic: </label>
+            <form class="input-group w-50">
+                <input class="form-control" type="text" id="title" placeholder="Enter a new title" />
+                <button class="btn btn-info" onclick="saveTitle()">Save</button>
+            </form>
+            <br/>
             
             <table class="table table-responsive table-hover border border-2 w-75">
                 <thead>

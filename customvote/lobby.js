@@ -12,6 +12,11 @@ function displayInfo() {
     } else {
         document.getElementById("codeDisplay").textContent = "ERROR: INVALID CODE";
     }
+
+    if (localStorage.getItem("title")) {
+        let savedTitle = localStorage.getItem("title");
+        document.getElementById("title").value = savedTitle;
+    }
 }
 
 function createCode() {
@@ -24,6 +29,7 @@ function createCode() {
         code[i] = char[randomIndex];
     }
 
+    localStorage.removeItem("title");
     localStorage.setItem("lobbyCode", code.join(""));
     window.location.href = "lobby.html";
 }
@@ -32,4 +38,10 @@ function joinCode() {
     const codeEl = document.querySelector("#joincode");
     localStorage.setItem("lobbyCode", codeEl.value);
     window.location.href = "lobby.html";
+}
+
+function saveTitle() {
+    let titleEl = document.getElementById("title").value;
+    localStorage.setItem("title", titleEl);
+    location.reload();
 }
