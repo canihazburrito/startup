@@ -6,3 +6,16 @@ function displayName() {
         document.getElementById("player-name").textContent = "User";
     }
 }
+
+function createCode() {
+    const char = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+    const code = new Array(6);
+    let randomIndex;
+
+    for (let i = 0; i < 6; i++) {
+        randomIndex = Math.floor(Math.random() * 36);
+        code[i] = char[randomIndex];
+    }
+    
+    localStorage.setItem("lobbyCode", code.join(""));
+}
