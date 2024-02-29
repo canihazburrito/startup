@@ -1,7 +1,7 @@
 function login() {
-    const emailEl = document.querySelector("#email");
+    const userEl = document.querySelector("#username");
     const passWord = document.querySelector("#pwd");
-    localStorage.setItem("email", emailEl.value);
+    localStorage.setItem("userName", userEl.value);
     localStorage.setItem("passWord", passWord.value);
     window.location.href = "joincreate.html";
 }
