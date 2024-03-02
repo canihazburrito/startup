@@ -49,3 +49,28 @@ function saveTitle() {
 function clearInfo() {
     localStorage.removeItem("title");
 }
+
+let options = [];
+
+function addOption() {
+    const newOption = document.getElementById("newopt").value;
+
+    if (!options.includes(newOption)) {
+        options.push(newOption);
+
+        updateTable();
+        updateDropdown();
+    }
+    document.getElementById("newopt").value="";
+}
+
+function updateTable() {
+    const tableBody = document.querySelector("tbody");
+    tableBody.innerHTML = "";
+
+    oprtions.forEach(option => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = "<td>${option}</td><td data-votes = '0'>0</td>";
+        tableBody.appendChild(tr);
+    });
+}
