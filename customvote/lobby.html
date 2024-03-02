@@ -78,10 +78,9 @@
             <br/>
 
             <!-- Enter in a new option, options stored in database -->
-            <!-- Once third party services and Websocket is implimented, this button won't reset the title -->
             <form class="input-group w-50">
                 <input class="form-control" type="text" id="newopt" placeholder="Enter a new option" />
-                <button class="btn btn-info" onclick="document.getElementById('newopt').value='';addOption()">Submit</button>
+                <button class="btn btn-info" onclick="addOption()">Submit</button>
             </form>
             <br/>
 
@@ -91,7 +90,7 @@
                     <!-- options updated when added -->
                     <option selected>--Choose an option--</option>
                 </select>
-                <button class="btn btn-info">
+                <button class="btn btn-info" onclick="vote()">
                     Submit Vote
                 </button>
             </form>
