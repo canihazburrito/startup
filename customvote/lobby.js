@@ -68,9 +68,26 @@ function updateTable() {
     const tableBody = document.querySelector("tbody");
     tableBody.innerHTML = "";
 
-    oprtions.forEach(option => {
+    options.forEach(option => {
         const tr = document.createElement("tr");
         tr.innerHTML = "<td>${option}</td><td data-votes = '0'>0</td>";
         tableBody.appendChild(tr);
+    });
+}
+
+function updateDropdown() {
+    const select = document.getElementById("vote-select");
+    select.innerHTML;
+
+    const defaultOpt = document.createElement("option");
+    defaultOpt.textContent = "--Choose an Option--";
+    defaultOpt.value = "";
+    select.appendChild(defaultOpt);
+
+    options.forEach(option => {
+        const newOption = document.createElement("option");
+        newOption.textContent = option;
+        newOption.value = option;
+        select.appendChild(newOption);
     });
 }
