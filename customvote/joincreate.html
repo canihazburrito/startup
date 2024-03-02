@@ -6,6 +6,7 @@
         <meta name="author" content="Carter Myers" />
         <meta name="google-site-verification" content="fivViaVoh4FhuOP2D4_h__WxWazbzBac1QC0z7iBnos" />
         <link rel="stylesheet" href="main.css"/>
+        <script src="lobby.js"></script>
         <!-- Tell browsers not to scale the viewport automatically -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -16,7 +17,7 @@
         <script src="https://kit.fontawesome.com/e0dcfe9aee.js" crossorigin="anonymous"></script>
         <title>Custom Vote</title>
     </head>
-    <body>
+    <body onload="displayInfo()">
         <header class="container-fluid">
 
             <!-- Navigation menu -->
@@ -42,7 +43,7 @@
         <main class="justify-content-start">
             <!-- Display the user's username -->
             <div class="player p-3">
-                Welcome: <span class="player-name text-secondary">User</span>
+                Welcome: <span class="text-secondary" id="player-name"></span>
             </div>
 
             <!-- Enter a lobby code or create a new lobby -->
@@ -52,14 +53,14 @@
                     <form action="lobby.html" method="get" class="col-auto">
                         <label for="code" class="col-form-label">Code: </label>
                         <div class="input-group col-auto">
-                            <input type="text" class="form-control" placeholder="Enter lobby code" />
-                            <button type="submit" class="btn btn-info">Join!</button>
+                            <input type="text" class="form-control" id="joincode" placeholder="Enter lobby code" />
+                            <button type="submit" class="btn btn-info" onclick="joinCode()">Join!</button>
                         </div>
                     </form>
                 </div>
                 <p>or</p>
                 <form action="lobby.html" method="get">
-                    <button type="submit" class="btn btn-info">Create Lobby</button>
+                    <button type="submit" class="btn btn-info" onclick="createCode()">Create Lobby</button>
                 </form>
             </div>
                 

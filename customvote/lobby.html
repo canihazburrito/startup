@@ -7,6 +7,7 @@
         <meta name="google-site-verification" content="fivViaVoh4FhuOP2D4_h__WxWazbzBac1QC0z7iBnos" />
         <link rel="stylesheet" href="main.css"/>
         <link rel="stylesheet" href="lobby.css"/>
+        <script src="lobby.js"></script>
         <!-- Tell browsers not to scale the viewport automatically -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -17,7 +18,7 @@
         <script src="https://kit.fontawesome.com/e0dcfe9aee.js" crossorigin="anonymous"></script>
         <title>Custom Vote</title>
     </head>
-    <body>
+    <body onload="displayInfo()">
         <header class="container-fluid">
 
             <!-- Navigation menu -->
@@ -43,24 +44,23 @@
         <main class="justify-content-start">
             <div class="row p-3">
                 <!-- Display the user's username -->
-                <div class="player col">
-                    Welcome: <span class="player-name text-secondary">User</span>
+                <div class="player p-3">
+                    Welcome: <span class="text-secondary" id="player-name"></span>
                 </div>
                 
                 <!-- Display of lobby code, which will come from a 3rd part service -->
                 <div class="col" id="lobbycode">
-                    Lobby code: <span class="code text-secondary border border-2">ABC123</span>
+                    Lobby code: <span class="text-secondary border border-2" id="codeDisplay"></span>
                 </div>
             </div>
 
-            <div>
-                <!-- Title of the topic of the lobby, this is editable by users in the lobby and is updated in realtime -->
-                <strong>
-                    <label for="topic">Topic: </label>
-                    <span id="topic" style="font-size:200%" contenteditable="true">You can edit this topic</span>
-                </strong>
-                <i class='far fa-edit'></i>
-            </div>
+            <!-- Title of the topic of the lobby, this is editable by users in the lobby and is updated in realtime -->
+            <label for="title">Topic: </label>
+            <form class="input-group w-50">
+                <textarea class="form-control" rows="1" id="title" placeholder="Enter a new title"></textarea>
+                <button class="btn btn-info" onclick="saveTitle()">Save</button>
+            </form>
+            <br/>
             
             <table class="table table-responsive table-hover border border-2 w-75">
                 <thead>
@@ -72,63 +72,33 @@
 
                 <!-- These options will be updated as users submit more options below -->
                 <tbody>
-                    <form>
-                        <tr>
-                            <td>
-                                <div class="radio">
-                                    <label class="form-check-label" for="option1">Option 1</label>
-                                    <input class="form-check-input" type="radio" id="option1" name="voteopt">
-                                </div>
-                            </td>
-                            <td>
-                                <!-- These votes will be updated in realtime with WebSocket -->
-                                <div class="votes">
-                                    0
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="radio">
-                                    <label class="form-check-label" for="option2">Option 2</label>
-                                    <input class="form-check-input" type="radio" id="option2" name="voteopt">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="votes">
-                                    5
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="radio">
-                                    <label class="form-check-label" for="option3">Option 3</label>
-                                    <input class="form-check-input" type="radio" id="option3" name="voteopt">
-                                </div>
-                            </td>
-                            <td>
-                                <div class="votes">
-                                    1
-                                </div>
-                            </td>
-                        </tr>
-                    </form>
+                    <!-- add new rows -->
                 </tbody>
             </table>
             <br/>
 
             <!-- Enter in a new option, options stored in database -->
-            <!-- Once third party services and Websocket is implimented, this button won't reset the title -->
             <form class="input-group w-50">
                 <input class="form-control" type="text" id="newopt" placeholder="Enter a new option" />
-                <button class="btn btn-info" onclick="document.getElementById('newopt').value=''">Submit</button>
+                <button class="btn btn-info" onclick="addOption()">Submit</button>
+            </form>
+            <br/>
+
+            <form class="input-group w-25">
+                <label class="pe-3" for="vote-select">Vote: </label>
+                <select class="form-select" aria-label="Default select example" id="vote-select">
+                    <!-- options updated when added -->
+                    <option selected>--Choose an option--</option>
+                </select>
+                <button class="btn btn-info" onclick="vote()">
+                    Submit Vote
+                </button>
             </form>
             <br/>
 
             <!-- Button to exit lobby -->
             <form action="joincreate.html" method="get">
-                <button class="btn btn-danger" type="submit">Exit</button>
+                <button class="btn btn-danger" type="submit" onclick="clearInfo()">Exit</button>
             </form>
             <br/>
 

@@ -6,6 +6,7 @@
         <meta name="author" content="Carter Myers" />
         <meta name="google-site-verification" content="fivViaVoh4FhuOP2D4_h__WxWazbzBac1QC0z7iBnos" />
         <link rel="stylesheet" href="main.css"/>
+        <script src="login.js"></script>
         <!-- Tell browsers not to scale the viewport automatically -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -43,24 +44,24 @@
             <!-- Login interface on the home page -->
             <div class="border border-2 text-center p-5 w-75">
                 <h3>Log In or Sign Up</h3>
-                <form action="joincreate.html" method="get">
+                <form method="get">
                     <div class="row mb-3">
-                        <label for="email" class="col-sm-2 col-form-label">Email: </label>
+                        <label for="username" class="col-sm-2 col-form-label">Username: </label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="email" id="email" placeholder="name@example.com"/>
+                            <input class="form-control" type="text" id="username" placeholder="Username"/>
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label for="pwd" class="col-sm-2 col-form-label">Password: </label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="password" id="pwd" name="pwd"/>
+                            <input class="form-control" type="password" id="pwd" name="pwd" placeholder="Password"/>
                         </div>
                     </div>
                     <div>
                         <p>
-                            <button class="btn btn-info col-auto" type="submit">Login</button>
+                            <button class="btn btn-info col-auto" type="submit" onclick="login()">Login</button>
                             or
-                            <button class="btn btn-info col-auto" type="submit">Sign Up</button>
+                            <button class="btn btn-info col-auto" type="submit" onclick="login()">Sign Up</button>
                         </p>
                     </div>
                 </form>
